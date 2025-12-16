@@ -49,33 +49,11 @@ tests/unit/
 # Install dependencies
 npm install
 
-# Configure local DynamoDB (see DYNAMODB_SETUP.md for detailed instructions)
-docker run -d -p 8000:8000 --name dynamodb-local amazon/dynamodb-local
-
-# Create DynamoDB table
-npm run migrate:local
-
-# Run unit tests
-npm run unit:test
-```
-
-## Available Scripts
-
-```bash
-# Development server with hot-reload
+# Running local server
 npm run dev
 
-# Start production server
-npm start
-
 # Run unit tests
 npm run unit:test
-
-# Run linting
-npm lint
-
-# Create local DynamoDB table
-npm run migrate:local
 ```
 
 ## API Endpoints

@@ -13,7 +13,7 @@ export class DynamoDBRepository {
 
   constructor(
     tableName: string,
-    region: string = 'ap-southeast-1',
+    region: string = 'us-east-1',
     isLocal: boolean = false
   ) {
     const clientConfig: any = { region };
