@@ -1,9 +1,9 @@
 import { FastifyInstance } from 'fastify';
 import { UserPhonePayload, UserPhoneQuery } from '../types/interfaces';
 
-export async function mainRoutes(app: FastifyInstance) {
+export async function apiRoutes(app: FastifyInstance) {
   app.get<{ Querystring: UserPhoneQuery }>(
-    '/user-phone',
+    '/otp-rate-limit',
     async (request, reply) => {
       const { phone_number, user_id } = request.query;
 

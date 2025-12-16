@@ -1,7 +1,7 @@
 import { buildApp } from './app';
 
 const PORT = Number(process.env.PORT) || 3000;
-const HOST = '0.0.0.0';
+const HOST = 'localhost';
 
 async function start() {
   const app = buildApp();
