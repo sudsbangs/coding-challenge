@@ -2,8 +2,8 @@ import { DynamoDBRepository } from './dynamodb.repository';
 import { UserPhoneRecord } from '../types/interfaces';
 
 export class OtpRequestHistoryRepository extends DynamoDBRepository {
-  constructor(region: string = 'ap-southeast-1') {
-    super('otp_request_history', region);
+  constructor(region: string = 'ap-southeast-1', isLocal: boolean = false) {
+    super('otp_request_history', region, isLocal);
   }
 
   /**

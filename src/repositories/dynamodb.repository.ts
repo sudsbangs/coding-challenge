@@ -11,8 +11,23 @@ export class DynamoDBRepository {
   private docClient: DynamoDBDocumentClient;
   private tableName: string;
 
-  constructor(tableName: string, region: string = 'ap-southeast-1') {
-    const client = new DynamoDBClient({ region });
+  constructor(
+    tableName: string,
+    region: string = 'ap-southeast-1',
+    isLocal: boolean = false
+  ) {
+    const clientConfig: any = { region };
+
+    // Add local endpoint if running locally
+    if (isLocal) {
+      clientConfig.endpoint = 'http://localhost:8000';
+      clientConfig.credentials = {
+        accessKeyId: 'test',
+        secretAccessKey: 'test',
+      };
+    }
+
+    const client = new DynamoDBClient(clientConfig);
     this.docClient = DynamoDBDocumentClient.from(client);
     this.tableName = tableName;
   }
