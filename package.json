@@ -1,0 +1,33 @@
+{
+  "name": "fastify-ts-coding-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coding challenge starter using Fastify + TypeScript",
+  "main": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "node --test"
+  },
+  "keywords": [
+    "fastify",
+    "typescript",
+    "coding-challenge"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^10.0.0",
+    "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "eslint": "^9.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
